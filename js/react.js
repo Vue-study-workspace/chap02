@@ -13,5 +13,13 @@ Vue.createApp({
   beforeUnmount() {
     console.log('before unmounted');
     clearInterval(this.timer);
-  }
+  },
+  renderTracked(e) {
+    console.log('renderTracked');
+    console.log(e);
+  },
+  renderTriggered(e) {
+    console.log('renderTriggered');
+    console.log(e);
+  },
 }).mount('#app');
