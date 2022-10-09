@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue.js</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="[key, value] in map">
+                {{ key }}：{{ value }}
+            </li>
+            <!-- <li v-for="[key] in map">
+                {{ key }}
+            </li> -->
+            <!-- <li v-for="[,value] in map">
+                {{ value }}
+            </li> -->
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
+    <script src="js/for_map.js"></script>
+</body>
+
+</html>
