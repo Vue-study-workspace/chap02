@@ -8,12 +8,12 @@
 
 <body>
     <div id="app">
-      <form>
-        <input type="button" value="変更" v-on:click="onclick" />
-      </form>
-      <ul>
-        <li v-for="item in list">{{ item }}</li>
-      </ul>
+        <form>
+            <input type="button" value="変更" v-on:click="onclick" />
+        </form>
+        <ul>
+            <li v-for="item in list" v-bind:key="item">{{ item }}</li>
+        </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
