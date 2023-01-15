@@ -11,7 +11,9 @@
         <p>現在値：{{current}}</p>
         <my-counter step="1" v-on:plus-minus="onplus"></my-counter>
         <my-counter step="2" v-on:plus-minus="onplus"></my-counter>
-        <my-counter step="-1" v-on:plus-minus="onplus"></my-counter>
+        <!-- <my-counter step="-1" v-on:plus-minus="onplus"></my-counter> -->
+        <my-counter step="-1" v-on:plus-minus="onplus"
+          v-on:vnode-mounted="onmounted"></my-counter>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
