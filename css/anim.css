@@ -6,7 +6,7 @@
 
 /* スライドアップ／スライドダウン */
 
-.v-enter-active, .v-leave-active {
+/* .v-enter-active, .v-leave-active {
   transition: height 1s;
 }
 
@@ -24,11 +24,10 @@
 
 .v-leave-to {
   height: 0px;
-} 
+}  */
 
 
 /* フェードイン／アウト */
-/*
 .v-enter-active, .v-leave-active {
   transition: opacity 5s;
 }
@@ -48,7 +47,6 @@
 .v-leave-to {
   opacity: 0.0;
 } 
-*/
 
 /* フェードイン／アウトのコンパクト化 */
 /*
