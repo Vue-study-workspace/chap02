@@ -5,11 +5,11 @@
 }
 
 .v-enter-active, .v-leave-active {
-  transition: opacity 5s;
+  transition: opacity .5s;
 }
 
 .v-leave-active {
-  position: absolute;
+  /* position: absolute; */
 }
 
 .v-enter-from, .v-leave-to {

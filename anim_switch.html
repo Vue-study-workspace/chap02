@@ -10,7 +10,7 @@
 <body>
     <div id="app">
       <input type="button" value="切り替え" v-on:click="onclick">
-      <transition>
+      <transition mode="out-in">
         <div class="panel" v-bind:key="id">
           {{ panels[id] }}
         </div>
