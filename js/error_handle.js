@@ -6,7 +6,14 @@ const app = Vue
       <div id="parent">
         <my-child />
       </div>
-    `
+    `,
+    errorCaptured(error, instance, info) {
+      console.log('■■ Hook ■■');
+      console.log(error);
+      console.log(instance);
+      console.log(info);
+      return false;
+    }
   })
   .component('my-child', {
     // マウント時に無条件に例外をスロー
@@ -31,11 +38,11 @@ const app = Vue
   });
 
 // エラーハンドラーを定義
-app.config.errorHandler = (error, vm, info) => {
-  console.log('■■ Global ■■');
-  console.log(error);
-  console.log(vm);
-  console.log(info);
-};
+// app.config.errorHandler = (error, vm, info) => {
+//   console.log('■■ Global ■■');
+//   console.log(error);
+//   console.log(vm);
+//   console.log(info);
+// };
 
 app.mount('#app');
