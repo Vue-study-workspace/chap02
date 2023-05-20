@@ -11,7 +11,17 @@ const app = Vue
   .component('my-child', {
     // マウント時に無条件に例外をスロー
     mounted() {
-      throw new Error('Error is occured by my-child')
+      // setTimeout(() => {
+      //   throw new Error('Error is occured by setTimeout.');
+      // }, 500);
+
+      // new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     reject('Error is occured by Promise.');
+      //   }, 500);
+      // });
+
+      throw new Error('Error is occured by my-child');
     },
     template: `
       <div id="child">
