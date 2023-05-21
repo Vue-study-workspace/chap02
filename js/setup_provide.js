@@ -8,7 +8,10 @@ Vue.createApp({})
     `,
     setup(props) {
       const title = Vue.ref('Vue 3実践入門');
-      Vue.provide('title', title);
+      // Vue.provide('title', title);
+
+      // 読み取り専用
+      Vue.provide('title', Vue.readonly(title));
       return {
         title
       };
@@ -30,7 +33,10 @@ Vue.createApp({})
         </div>
     `,
     setup(props) {
-      const title = Vue.inject('title');
+      // const title = Vue.inject('title');
+
+      // default値を設定する場合
+      const title = Vue.inject('title', 'タイトル未定');
       return {
         title
       };
