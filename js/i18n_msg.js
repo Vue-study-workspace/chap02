@@ -9,7 +9,8 @@ const messages = {
       morning: 'おはようございます',
       hello: 'こんにちは、{ 0 }さん',
       how_are_you: 'ご機嫌いかがですか',
-      morning_set: '@:greet.morning @:greet.how_are_you'
+      morning_set: '@:greet.morning @:greet.how_are_you',
+      mail: "wings{ '@' }example.com"
     }
   },
   de: {
@@ -22,7 +23,11 @@ const messages = {
 Vue.createApp({})
   .use(
     VueI18n.createI18n({
-      locale: 'ja',
+      // locale: 'ja',
+      locale: (navigator.languages && navigator.languages[0]) ||
+        navigator.language ||
+        navigator.userLanguage ||
+        navigator.browserLanguage,
       fallbackLocale: 'en',
       messages,
     })
