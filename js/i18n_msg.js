@@ -7,7 +7,7 @@ const messages = {
   ja: {
     greet: {
       morning: 'おはようございます',
-      hello: 'こんにちは、{ name }さん',
+      hello: 'こんにちは、{ 0 }さん',
     }
   },
   de: {
