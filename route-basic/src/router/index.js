@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Article from '@/components/Article.vue'
+import Page from '@/views/Page.vue'
 
 const routes = [
   {
@@ -23,9 +24,21 @@ const routes = [
     path: '/article/:aid',
     name: 'Article',
     component: Article,
-    props: routes => ({
-      aid: Number(routes.params.aid)
-    })
+    props: true,
+    children: [
+      {
+        path: 'pages/:page_num',
+        name: 'Page',
+        component: Page,
+        props: true
+      },
+      {
+        path: '',
+        name: 'PageOne',
+        component: Page,
+        props: { page_num: 1 }
+      }
+    ]
   },
   {
     path: '/:paths(.*)',
