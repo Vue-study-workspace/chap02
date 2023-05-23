@@ -6,7 +6,10 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    components: {
+      default: HomeView,
+      sub: Article
+    }
   },
   {
     path: '/about',
