@@ -20,7 +20,9 @@ const routes = [
     path: '/article/:aid',
     name: 'Article',
     component: Article,
-    props: true
+    props: routes => ({
+      aid: Number(routes.params.aid)
+    })
   }
 ]
 

@@ -6,7 +6,7 @@
 export default {
   name: 'Article',
   props: {
-    aid: String
+    aid: Number
   }
 }
 </script>
