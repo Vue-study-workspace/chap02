@@ -23,6 +23,11 @@ const routes = [
     props: routes => ({
       aid: Number(routes.params.aid)
     })
+  },
+  {
+    path: '/:paths(.*)',
+    name: 'nothing',
+    redirect: '/'
   }
 ]
 
