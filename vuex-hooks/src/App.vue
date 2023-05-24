@@ -9,7 +9,6 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
