@@ -33,13 +33,22 @@ export default {
   },
   methods: {
     // 登録ボタンクリックでストアに反映
+    // onclick() {
+    //   this.$store.commit('addBook',{
+    //     book: {
+    //       isbn: this.isbn, title: this.title, price: this.price
+    //     }
+    //   });
+    // },
+
+    // 非同期
     onclick() {
-      this.$store.commit('addBook',{
+      this.$store.dispatch('addAsync', {
         book: {
           isbn: this.isbn, title: this.title, price: this.price
         }
       });
-    }
+    },
   }
 }
 </script>
