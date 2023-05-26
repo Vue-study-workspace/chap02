@@ -1,15 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <form>
+      <label for="name">氏名：</label>
+      <input type="text" id="name" v-model="name" />
+    </form>
+    <div>こんにちは、{{ name }}さん！</div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  computed: {
+    name: {
+      // ゲッター(ステートから値を取得)
+      get() {
+        return this.$store.state.name;
+      },
+      // セッター(ミューテーション経由でステートを更新)
+      set(value) {
+        this.$store.commit('updateName', value);
+      }
+    }
   }
 }
 </script>
