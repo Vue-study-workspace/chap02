@@ -9,5 +9,14 @@ export default {
     setUpdated(state) {
       state.updated = (new Date()).toTimeString();
     }
+  },
+  actions: {
+    globalAction: {
+      handler(state) {
+        console.log('globalAction is called');
+        console.log(state);
+      },
+      root: true
+    },
   }
 }

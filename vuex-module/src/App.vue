@@ -22,6 +22,7 @@ export default {
   methods: {
     // main/subモジュールの時刻(updated)を更新
     setUpdated() {
+      this.$store.dispatch('globalAction');
       this.$store.commit('main/setUpdated');
       this.$store.commit('sub/setUpdated');
     }
