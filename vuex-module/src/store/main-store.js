@@ -18,5 +18,10 @@ export default {
       },
       root: true
     },
+  },
+  getters: {
+    localUpdate(state) {
+      return state.updated;
+    }
   }
 }
