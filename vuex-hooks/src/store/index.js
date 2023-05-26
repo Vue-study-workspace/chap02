@@ -1,6 +1,6 @@
-import { createStore } from 'vuex'
+import { createLogger, createStore } from 'vuex'
 import { ADD_BOOK } from './mutation-types';
-import myLogs from './my-logs';
+// import myLogs from './my-logs';
 
 export default createStore({
   strict: true,
@@ -61,5 +61,14 @@ export default createStore({
   },
   modules: {
   },
-  plugins: [myLogs]
+  // plugins: [myLogs]
+  plugins: [createLogger({
+    collapsed: false,
+    actionFilter(action) {
+      return !action.type.endsWith('Action');
+    },
+    actionTransformer(action) {
+      return action.type;
+    }
+  })]
 })
