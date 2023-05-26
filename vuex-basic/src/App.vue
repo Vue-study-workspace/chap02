@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: 'App',
   computed: {
@@ -15,16 +17,7 @@ export default {
       return this.$store.state.count;
     }
   },
-  methods: {
-    // [-]ボタンでカウント値をデクリメント
-    minus() {
-      this.$store.commit('minus');
-    },
-    // [+]ボタンでカウント値をインクリメント
-    plus() {
-      this.$store.commit('plus');
-    }
-  }
+  methods: mapMutations(['plus', 'minus']),
 }
 </script>
 
