@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { ADD_BOOK } from './mutation-types';
 
 export default createStore({
   strict: true,
@@ -45,7 +46,7 @@ export default createStore({
     }
   },
   mutations: {
-    addBook(state, payload) {
+    [ADD_BOOK](state, payload) {
       state.books.push(payload.book);
     }
   },
