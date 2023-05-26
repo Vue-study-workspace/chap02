@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import { ADD_BOOK } from './mutation-types';
+import myLogs from './my-logs';
 
 export default createStore({
   strict: true,
@@ -59,5 +60,6 @@ export default createStore({
     }
   },
   modules: {
-  }
+  },
+  plugins: [myLogs]
 })
